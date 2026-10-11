@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mpl-cache/
+.DS_Store
+tmp/
+
+# Human-written - Ignore private files
+AIassign2.pdf
+docs/original-gitignore.pdf
+output/docx/

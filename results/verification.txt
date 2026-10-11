@@ -1,0 +1,3 @@
+Numerical tests: 9 passed.
+All 18 saved prediction sets reproduce reported classification metrics.
+All six clean checkpoints reproduce their saved predictions.

@@ -1,0 +1,540 @@
+{
+  "config": {
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "epochs": 250,
+    "hidden": 128,
+    "learning_rate": 0.003,
+    "batch_size": 64,
+    "regularization": 0.01,
+    "annealing_epochs": 10,
+    "split": "60/20/20 stratified",
+    "n_train": 1077,
+    "n_validation": 360,
+    "n_test": 360,
+    "dataset": "sklearn load_digits (UCI optical handwritten digits)",
+    "dataset_sha256": "f6d9e39f37dc45d327f6db33428ee58970ccceabb2535a5c179de35886b70443",
+    "noise_std": [
+      0,
+      0.3,
+      0.6
+    ],
+    "selection": "minimum validation predictive NLL",
+    "scope": "classification and uncertainty core; no active domain adaptation",
+    "date": "2026-10-06"
+  },
+  "runs": [
+    {
+      "seed": 42,
+      "method": "softmax",
+      "condition": "clean",
+      "n_test": 360,
+      "best_epoch": 234,
+      "accuracy": 0.9722222222222222,
+      "macro_f1": 0.9720207485399458,
+      "nll": 0.09409938724273835,
+      "brier": 0.04566319908427834,
+      "ece": 0.02215459161022913,
+      "error_auc_confidence": 0.97
+    },
+    {
+      "seed": 42,
+      "method": "softmax",
+      "condition": "noise_0.3",
+      "n_test": 360,
+      "best_epoch": 234,
+      "accuracy": 0.7638888888888888,
+      "macro_f1": 0.7547724776443452,
+      "nll": 1.1372243312958568,
+      "brier": 0.38532789463051387,
+      "ece": 0.16531386785315613,
+      "error_auc_confidence": 0.8515935828877006
+    },
+    {
+      "seed": 42,
+      "method": "softmax",
+      "condition": "noise_0.6",
+      "n_test": 360,
+      "best_epoch": 234,
+      "accuracy": 0.4,
+      "macro_f1": 0.3877562108910887,
+      "nll": 5.784735163838784,
+      "brier": 1.0569135478317806,
+      "ece": 0.49219948441832284,
+      "error_auc_confidence": 0.6582111625514403
+    },
+    {
+      "seed": 42,
+      "method": "evidential",
+      "condition": "clean",
+      "n_test": 360,
+      "best_epoch": 249,
+      "accuracy": 0.9722222222222222,
+      "macro_f1": 0.9720780379192495,
+      "nll": 0.1669203120386177,
+      "brier": 0.05785400328515265,
+      "ece": 0.07103142045559967,
+      "error_auc_confidence": 0.9537142857142857,
+      "mean_strength": 186.70067276263347,
+      "mean_aleatoric": 0.1590906522438065,
+      "mean_epistemic": 0.0019464611967397367,
+      "error_auc_epistemic": 0.9782857142857143,
+      "error_auc_entropy_epistemic": 0.9748571428571429
+    },
+    {
+      "seed": 42,
+      "method": "evidential",
+      "condition": "noise_0.3",
+      "n_test": 360,
+      "best_epoch": 249,
+      "accuracy": 0.7888888888888889,
+      "macro_f1": 0.7824824129400332,
+      "nll": 0.7691315924548241,
+      "brier": 0.31441330212568236,
+      "ece": 0.07458754935472892,
+      "error_auc_confidence": 0.859988880652335,
+      "mean_strength": 137.90115146672454,
+      "mean_aleatoric": 0.300799307057073,
+      "mean_epistemic": 0.00792678362459734,
+      "error_auc_epistemic": 0.8499814677538917,
+      "error_auc_entropy_epistemic": 0.7776130467012602
+    },
+    {
+      "seed": 42,
+      "method": "evidential",
+      "condition": "noise_0.6",
+      "n_test": 360,
+      "best_epoch": 249,
+      "accuracy": 0.4305555555555556,
+      "macro_f1": 0.41224872231671805,
+      "nll": 2.147522350521383,
+      "brier": 0.8401498916968693,
+      "ece": 0.2935515946828332,
+      "error_auc_confidence": 0.7042958300550748,
+      "mean_strength": 124.70857528430388,
+      "mean_aleatoric": 0.377477766060716,
+      "mean_epistemic": 0.010231336002084417,
+      "error_auc_epistemic": 0.72985051140834,
+      "error_auc_entropy_epistemic": 0.7064988198269079
+    },
+    {
+      "seed": 43,
+      "method": "softmax",
+      "condition": "clean",
+      "n_test": 360,
+      "best_epoch": 55,
+      "accuracy": 0.9694444444444444,
+      "macro_f1": 0.9696775882941202,
+      "nll": 0.07920990332839845,
+      "brier": 0.04257853803446091,
+      "ece": 0.01316366513648496,
+      "error_auc_confidence": 0.9687418598593384
+    },
+    {
+      "seed": 43,
+      "method": "softmax",
+      "condition": "noise_0.3",
+      "n_test": 360,
+      "best_epoch": 55,
+      "accuracy": 0.8166666666666667,
+      "macro_f1": 0.813766527265902,
+      "nll": 0.5910567230052851,
+      "brier": 0.27573814302472055,
+      "ece": 0.08702029690980909,
+      "error_auc_confidence": 0.84853638425067
+    },
+    {
+      "seed": 43,
+      "method": "softmax",
+      "condition": "noise_0.6",
+      "n_test": 360,
+      "best_epoch": 55,
+      "accuracy": 0.4361111111111111,
+      "macro_f1": 0.4285079730926773,
+      "nll": 3.3980311114140345,
+      "brier": 0.9371514936307117,
+      "ece": 0.41515951648970306,
+      "error_auc_confidence": 0.6559254494681686
+    },
+    {
+      "seed": 43,
+      "method": "evidential",
+      "condition": "clean",
+      "n_test": 360,
+      "best_epoch": 250,
+      "accuracy": 0.9638888888888889,
+      "macro_f1": 0.9638310272556847,
+      "nll": 0.1506118828940126,
+      "brier": 0.049412054955032404,
+      "ece": 0.08329304979601082,
+      "error_auc_confidence": 0.9902460651740191,
+      "mean_strength": 171.11519940792584,
+      "mean_aleatoric": 0.1623690702872904,
+      "mean_epistemic": 0.002085153459635982,
+      "error_auc_epistemic": 0.9816005320328087,
+      "error_auc_entropy_epistemic": 0.9281755708268677
+    },
+    {
+      "seed": 43,
+      "method": "evidential",
+      "condition": "noise_0.3",
+      "n_test": 360,
+      "best_epoch": 250,
+      "accuracy": 0.8,
+      "macro_f1": 0.7924674605487778,
+      "nll": 0.7599053909160471,
+      "brier": 0.3166545323946356,
+      "ece": 0.06980716482404309,
+      "error_auc_confidence": 0.8100405092592592,
+      "mean_strength": 128.29214703698239,
+      "mean_aleatoric": 0.31383716801058736,
+      "mean_epistemic": 0.007367818738360394,
+      "error_auc_epistemic": 0.8703703703703705,
+      "error_auc_entropy_epistemic": 0.8475597993827161
+    },
+    {
+      "seed": 43,
+      "method": "evidential",
+      "condition": "noise_0.6",
+      "n_test": 360,
+      "best_epoch": 250,
+      "accuracy": 0.45,
+      "macro_f1": 0.430747068609812,
+      "nll": 2.040293118073633,
+      "brier": 0.8148273323418026,
+      "ece": 0.25588903132302643,
+      "error_auc_confidence": 0.6302531487716673,
+      "mean_strength": 119.52541956901179,
+      "mean_aleatoric": 0.4122194987652282,
+      "mean_epistemic": 0.009386860050126265,
+      "error_auc_epistemic": 0.6385459533607682,
+      "error_auc_entropy_epistemic": 0.6129504925801221
+    },
+    {
+      "seed": 44,
+      "method": "softmax",
+      "condition": "clean",
+      "n_test": 360,
+      "best_epoch": 123,
+      "accuracy": 0.9694444444444444,
+      "macro_f1": 0.9695081231486201,
+      "nll": 0.1024909096280123,
+      "brier": 0.04269498007572026,
+      "ece": 0.015949698388304186,
+      "error_auc_confidence": 0.9815056004167753
+    },
+    {
+      "seed": 44,
+      "method": "softmax",
+      "condition": "noise_0.3",
+      "n_test": 360,
+      "best_epoch": 123,
+      "accuracy": 0.8361111111111111,
+      "macro_f1": 0.8368709983859418,
+      "nll": 0.6729955197400765,
+      "brier": 0.2525651936804197,
+      "ece": 0.09883845789255713,
+      "error_auc_confidence": 0.8758376034686638
+    },
+    {
+      "seed": 44,
+      "method": "softmax",
+      "condition": "noise_0.6",
+      "n_test": 360,
+      "best_epoch": 123,
+      "accuracy": 0.4583333333333333,
+      "macro_f1": 0.4546550094321183,
+      "nll": 3.5362786946420393,
+      "brier": 0.8883715887989655,
+      "ece": 0.39387555228273075,
+      "error_auc_confidence": 0.6991452991452991
+    },
+    {
+      "seed": 44,
+      "method": "evidential",
+      "condition": "clean",
+      "n_test": 360,
+      "best_epoch": 240,
+      "accuracy": 0.9666666666666667,
+      "macro_f1": 0.9665374541874637,
+      "nll": 0.16955316915148874,
+      "brier": 0.05781773075146288,
+      "ece": 0.06558951850965228,
+      "error_auc_confidence": 0.9501915708812261,
+      "mean_strength": 180.34156103227554,
+      "mean_aleatoric": 0.1565670231183187,
+      "mean_epistemic": 0.0020649536638978156,
+      "error_auc_epistemic": 0.9501915708812261,
+      "error_auc_entropy_epistemic": 0.8939176245210727
+    },
+    {
+      "seed": 44,
+      "method": "evidential",
+      "condition": "noise_0.3",
+      "n_test": 360,
+      "best_epoch": 240,
+      "accuracy": 0.8194444444444444,
+      "macro_f1": 0.8188595176526825,
+      "nll": 0.6910938076535406,
+      "brier": 0.28434217790615646,
+      "ece": 0.05126176492628133,
+      "error_auc_confidence": 0.8243024771838332,
+      "mean_strength": 134.41988278857545,
+      "mean_aleatoric": 0.30922876275595024,
+      "mean_epistemic": 0.007396099951606488,
+      "error_auc_epistemic": 0.8602346805736637,
+      "error_auc_entropy_epistemic": 0.8222164276401565
+    },
+    {
+      "seed": 44,
+      "method": "evidential",
+      "condition": "noise_0.6",
+      "n_test": 360,
+      "best_epoch": 240,
+      "accuracy": 0.44722222222222224,
+      "macro_f1": 0.4367659509580723,
+      "nll": 2.13139906923326,
+      "brier": 0.8404361214499366,
+      "ece": 0.28758356059997114,
+      "error_auc_confidence": 0.6067917225880958,
+      "mean_strength": 125.23123347592355,
+      "mean_aleatoric": 0.38261035774021396,
+      "mean_epistemic": 0.007767425630557213,
+      "error_auc_epistemic": 0.6517681575579761,
+      "error_auc_entropy_epistemic": 0.6535784512625239
+    }
+  ],
+  "aggregate": [
+    {
+      "method": "softmax",
+      "condition": "clean",
+      "accuracy": {
+        "mean": 0.9703703703703703,
+        "std": 0.001603750747748955
+      },
+      "macro_f1": {
+        "mean": 0.9704021533275621,
+        "std": 0.0014043031919954328
+      },
+      "nll": {
+        "mean": 0.09193340006638302,
+        "std": 0.011790671690653029
+      },
+      "brier": {
+        "mean": 0.04364557239815317,
+        "std": 0.001748285666207469
+      },
+      "ece": {
+        "mean": 0.017089318378339425,
+        "std": 0.004602525394317165
+      },
+      "error_auc_confidence": {
+        "mean": 0.9734158200920379,
+        "std": 0.0070341409162929915
+      }
+    },
+    {
+      "method": "softmax",
+      "condition": "noise_0.3",
+      "accuracy": {
+        "mean": 0.8055555555555555,
+        "std": 0.03737117790853812
+      },
+      "macro_f1": {
+        "mean": 0.801803334432063,
+        "std": 0.04233651218598795
+      },
+      "nll": {
+        "mean": 0.8004255246804061,
+        "std": 0.29453958767164073
+      },
+      "brier": {
+        "mean": 0.30454374377855137,
+        "std": 0.07091407241854651
+      },
+      "ece": {
+        "mean": 0.11705754088517412,
+        "std": 0.04220689578237339
+      },
+      "error_auc_confidence": {
+        "mean": 0.8586558568690115,
+        "std": 0.014958139190339271
+      }
+    },
+    {
+      "method": "softmax",
+      "condition": "noise_0.6",
+      "accuracy": {
+        "mean": 0.4314814814814815,
+        "std": 0.029440950177008585
+      },
+      "macro_f1": {
+        "mean": 0.42363973113862813,
+        "std": 0.03371404968778876
+      },
+      "nll": {
+        "mean": 4.239681656631619,
+        "std": 1.3398398612024371
+      },
+      "brier": {
+        "mean": 0.9608122100871527,
+        "std": 0.08672640956524633
+      },
+      "ece": {
+        "mean": 0.43374485106358557,
+        "std": 0.05172968106965762
+      },
+      "error_auc_confidence": {
+        "mean": 0.6710939703883027,
+        "std": 0.024320030938499687
+      }
+    },
+    {
+      "method": "evidential",
+      "condition": "clean",
+      "accuracy": {
+        "mean": 0.9675925925925926,
+        "std": 0.0042431256434776144
+      },
+      "macro_f1": {
+        "mean": 0.9674821731207993,
+        "std": 0.004203887084412471
+      },
+      "nll": {
+        "mean": 0.1623617880280397,
+        "std": 0.010260515929434348
+      },
+      "brier": {
+        "mean": 0.055027929663882647,
+        "std": 0.0048635239778686105
+      },
+      "ece": {
+        "mean": 0.07330466292042093,
+        "std": 0.009068047114989472
+      },
+      "error_auc_confidence": {
+        "mean": 0.9647173072565103,
+        "std": 0.022178604341951767
+      },
+      "mean_strength": {
+        "mean": 179.38581106761163,
+        "std": 7.836570577669272
+      },
+      "mean_aleatoric": {
+        "mean": 0.1593422485498052,
+        "std": 0.0029091946245717692
+      },
+      "mean_epistemic": {
+        "mean": 0.002032189440091178,
+        "std": 7.492667561061859e-05
+      },
+      "error_auc_epistemic": {
+        "mean": 0.970025939066583,
+        "std": 0.017256842850253296
+      },
+      "error_auc_entropy_epistemic": {
+        "mean": 0.9323167794016944,
+        "std": 0.040628359719091824
+      }
+    },
+    {
+      "method": "evidential",
+      "condition": "noise_0.3",
+      "accuracy": {
+        "mean": 0.8027777777777777,
+        "std": 0.015466012118972278
+      },
+      "macro_f1": {
+        "mean": 0.7979364637138312,
+        "std": 0.018795103977719465
+      },
+      "nll": {
+        "mean": 0.7400435970081373,
+        "std": 0.04264202278390501
+      },
+      "brier": {
+        "mean": 0.30513667080882484,
+        "std": 0.018043391576667654
+      },
+      "ece": {
+        "mean": 0.06521882636835112,
+        "std": 0.01232122932740838
+      },
+      "error_auc_confidence": {
+        "mean": 0.8314439556984757,
+        "std": 0.025728592805213536
+      },
+      "mean_strength": {
+        "mean": 133.53772709742748,
+        "std": 4.864862848043066
+      },
+      "mean_aleatoric": {
+        "mean": 0.30795507927453686,
+        "std": 0.006611592604578172
+      },
+      "mean_epistemic": {
+        "mean": 0.007563567438188074,
+        "std": 0.00031487212532699065
+      },
+      "error_auc_epistemic": {
+        "mean": 0.860195506232642,
+        "std": 0.010194507758975384
+      },
+      "error_auc_entropy_epistemic": {
+        "mean": 0.8157964245747108,
+        "std": 0.035412559667305
+      }
+    },
+    {
+      "method": "evidential",
+      "condition": "noise_0.6",
+      "accuracy": {
+        "mean": 0.4425925925925926,
+        "std": 0.010516496936667168
+      },
+      "macro_f1": {
+        "mean": 0.42658724729486747,
+        "std": 0.012776999260088828
+      },
+      "nll": {
+        "mean": 2.1064048459427585,
+        "std": 0.05781920503824827
+      },
+      "brier": {
+        "mean": 0.8318044484962028,
+        "std": 0.014703310394529634
+      },
+      "ece": {
+        "mean": 0.2790080622019436,
+        "std": 0.020242814757063674
+      },
+      "error_auc_confidence": {
+        "mean": 0.6471135671382794,
+        "std": 0.05089172844240937
+      },
+      "mean_strength": {
+        "mean": 123.1550761097464,
+        "std": 3.1542190553431713
+      },
+      "mean_aleatoric": {
+        "mean": 0.39076920752205274,
+        "std": 0.01875292297616296
+      },
+      "mean_epistemic": {
+        "mean": 0.00912854056092263,
+        "std": 0.0012521023514899452
+      },
+      "error_auc_epistemic": {
+        "mean": 0.6733882074423615,
+        "std": 0.04934268433940419
+      },
+      "error_auc_entropy_epistemic": {
+        "mean": 0.6576759212231846,
+        "std": 0.04690857413870962
+      }
+    }
+  ]
+}
